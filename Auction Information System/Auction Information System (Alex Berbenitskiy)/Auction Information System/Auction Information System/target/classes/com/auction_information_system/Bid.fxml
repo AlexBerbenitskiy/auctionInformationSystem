@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="373.0" prefWidth="892.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.auction_information_system.BidController">
+    <children>
+        <BorderPane layoutY="6.0" prefHeight="200.0" prefWidth="200.0">
+            <center>
+                <HBox prefHeight="166.0" prefWidth="0.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <VBox prefHeight="161.0" prefWidth="143.0" />
+                    </children>
+                </HBox>
+            </center>
+         <left>
+                <VBox prefHeight="152.0" prefWidth="423.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <ListView fx:id="listViewBidders" prefHeight="90.0" prefWidth="423.0" />
+                    <Button mnemonicParsing="false" onAction="#listBidders" prefHeight="30.0" prefWidth="142.0" text="Refresh Bidders" />
+                  <HBox alignment="BOTTOM_LEFT" prefHeight="33.0" prefWidth="423.0">
+                     <children>
+                                <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="66.0" text="Time of Bid" />
+                                <TextField fx:id="txtBidTime" prefHeight="31.0" prefWidth="70.0" />
+                        <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="48.0" text="Amount">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="txtBidAmount" prefHeight="31.0" prefWidth="70.0" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                    </children>
+                </VBox>
+         </left>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+        </BorderPane>
+        <ListView fx:id="listViewBid" layoutX="8.0" layoutY="227.0" prefHeight="138.0" prefWidth="876.0" />
+      <VBox layoutX="446.0" layoutY="6.0" prefHeight="174.0" prefWidth="446.0">
+         <children>
+             <ListView fx:id="listViewAuction" prefHeight="97.0" prefWidth="446.0" />
+              <Button mnemonicParsing="false" onAction="#listAuctionLots" prefHeight="31.0" prefWidth="142.0" text="Refresh Auction Lots" />
+         </children>
+      </VBox>
+      <ButtonBar layoutX="8.0" layoutY="186.0" prefHeight="40.0" prefWidth="876.0">
+        <buttons>
+            <Button mnemonicParsing="false" onAction="#listBids" prefHeight="30.0" prefWidth="104.0" text="View All Bids" />
+            <Button mnemonicParsing="false" onAction="#addBid" prefHeight="30.0" prefWidth="421.0" text="Place Bid" />
+            <Button mnemonicParsing="false" onAction="#deleteBid" prefHeight="30.0" prefWidth="94.0" text="Withdraw Bid" />
+            <Button onAction="#save" alignment="CENTER" mnemonicParsing="false" prefHeight="30.0" prefWidth="142.0" text="Save system" />
+            <Button onAction="#load" alignment="CENTER" mnemonicParsing="false" prefHeight="30.0" prefWidth="142.0" text="Load system" />
+        </buttons>
+      </ButtonBar>
+    </children>
+</AnchorPane>

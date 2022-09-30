@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <TabPane prefHeight="423.0" prefWidth="906.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Auction Lot">
+                    <fx:include source="AuctionLot.fxml" />
+                </Tab>
+                <Tab text="Bidder">
+                    <fx:include source="Bidder.fxml" />
+                </Tab>
+                <Tab text="Bid">
+                    <fx:include source="Bid.fxml" />
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>

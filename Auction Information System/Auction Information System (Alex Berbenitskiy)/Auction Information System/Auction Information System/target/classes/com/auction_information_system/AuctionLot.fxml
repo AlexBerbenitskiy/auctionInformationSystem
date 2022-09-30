@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="373.0" prefWidth="892.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.auction_information_system.AuctionLotController">
+    <children>
+        <BorderPane layoutY="6.0" prefHeight="200.0" prefWidth="200.0">
+            <right>
+                <VBox prefHeight="200.0" prefWidth="571.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ListView fx:id="listViewBid" prefHeight="126.0" prefWidth="424.0">
+                     <VBox.margin>
+                        <Insets right="100.0" />
+                     </VBox.margin></ListView>
+               </children></VBox>
+            </right>
+            <center>
+                <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                            <children>
+                                <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="143.0" text="Auction Name" />
+                                <Label prefHeight="25.0" prefWidth="106.0" text="Description" />
+                                <Label prefHeight="22.0" prefWidth="74.0" text="Type" />
+                                <Label prefHeight="27.0" prefWidth="90.0" text="Date of Origin" />
+                        <Label prefHeight="30.0" prefWidth="138.0" text="Asking Price" />
+                            </children>
+                        </VBox>
+                        <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="260.0">
+                            <children>
+                                <TextField fx:id="txtName" prefHeight="31.0" prefWidth="230.0">
+                           <VBox.margin>
+                              <Insets right="20.0" />
+                           </VBox.margin></TextField>
+                                <TextField fx:id="txtDescription">
+                           <VBox.margin>
+                              <Insets right="20.0" />
+                           </VBox.margin></TextField>
+                                <TextField fx:id="txtType">
+                           <VBox.margin>
+                              <Insets right="20.0" />
+                           </VBox.margin></TextField>
+                                <TextField fx:id="txtOrigin">
+                           <VBox.margin>
+                              <Insets right="20.0" />
+                           </VBox.margin></TextField>
+                        <TextField fx:id="txtAskingPrice" prefHeight="30.0" prefWidth="230.0">
+                           <VBox.margin>
+                              <Insets right="20.0" />
+                           </VBox.margin></TextField>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </center>
+        </BorderPane>
+        <ListView fx:id="listViewAuction" layoutX="8.0" layoutY="227.0" prefHeight="142.0" prefWidth="839.0" />
+      <ButtonBar layoutX="8.0" layoutY="186.0" prefHeight="40.0" prefWidth="815.0">
+         <buttons>
+              <Button fx:id="listButton" alignment="CENTER" mnemonicParsing="false" onAction="#listAuctionLot" prefHeight="30.0" prefWidth="133.0" text="List Auction Lots" />
+              <Button mnemonicParsing="false" onAction="#addAuctionLot" prefHeight="30.0" prefWidth="70.0" text="Add" />
+              <Button mnemonicParsing="false" onAction="#deleteLotBtn" prefHeight="30.0" prefWidth="70.0" text="Withdraw" />
+              <Button mnemonicParsing="false" onAction="#editLot" prefHeight="30.0" prefWidth="54.0" text="Edit" />
+            <Button mnemonicParsing="false" onAction="#listBidsHigh" prefHeight="30.0" text="List Bids (High)" />
+            <Button mnemonicParsing="false" onAction="#listBidsLow" prefHeight="30.0" text="List Bids (Low)" />
+            <Button mnemonicParsing="false" onAction="#sellLot" prefHeight="30.0" text="Accept bid" />
+         </buttons>
+      </ButtonBar>
+    </children>
+</AnchorPane>
